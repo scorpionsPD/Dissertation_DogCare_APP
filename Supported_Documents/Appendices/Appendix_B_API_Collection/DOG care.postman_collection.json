@@ -1,0 +1,510 @@
+{
+	"info": {
+		"_postman_id": "19e6dcb4-8581-480b-b0a3-efb864221ce1",
+		"name": "DOG care",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1069132"
+	},
+	"item": [
+		{
+			"name": "http://localhost/dog_care/user_registration.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_type\":\"3\",\"firstname\":\"Rahul\",\"lastname\":\"khan\", \"address\":\"new colony\",\"email\":\"rahulkan@gmail\",\"password\":\"111111\", \"device_type\":\"2\", \"device_id\":\"110021\", \"device_token\":\"110021\" }"
+				},
+				"url": {
+					"raw": "http://159.203.183.64/Live/API/CorePHPAPIS/dog_care/user_registration.php",
+					"protocol": "http",
+					"host": [
+						"159",
+						"203",
+						"183",
+						"64"
+					],
+					"path": [
+						"Live",
+						"API",
+						"CorePHPAPIS",
+						"dog_care",
+						"user_registration.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/user_login.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"rahulkan@gmail.com\",\"password\":\"111111\" }"
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/user_login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"user_login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/create_pet.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "petname",
+							"value": "rocky",
+							"type": "text"
+						},
+						{
+							"key": "breed",
+							"value": "grot",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "34",
+							"type": "text"
+						},
+						{
+							"key": "health",
+							"value": "good",
+							"type": "text"
+						},
+						{
+							"key": "date_acquired",
+							"value": "2022-07-16",
+							"type": "text"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "ziptest.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/create_pet.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"create_pet.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/update_pet.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"pet_id\":\"3\",\"petname\":\"Rahul\",\"breed\":\"khan\", \"sex\":\"new colony\",\"age\":\"5\",\"weight\":\"111111\", \"health\":\"2\" }"
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/update_pet.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"update_pet.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/fetch_allpet_byuser.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\":\"3\" }"
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/fetch_allpet_byuser.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"fetch_allpet_byuser.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/add_symptoms.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\":\"3\",\"pet_id\":\"3\",\"name\":\"fever\",\"description\":\"acute fever\",\"level\":\"0\" }"
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/add_symptoms.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"add_symptoms.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/symptoms_byuser.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\":\"3\",\"limit\":\"5\",\"offset\":\"0\" }"
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/symptoms_byuser.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"symptoms_byuser.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/symptoms_byexpert.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\":\"3\",\"limit\":\"5\",\"offset\":\"0\" }"
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/symptoms_byexpert.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"symptoms_byexpert.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/symptom_update_byexpert.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\":\"3\",\"symptom_id\":\"2\",\"level\":\"1\",\"expert_review\":\"now good\" }"
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/symptom_update_byexpert.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"symptom_update_byexpert.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/dog_care/expertlist.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"admin_id\":\"4\"}"
+				},
+				"url": {
+					"raw": "http://localhost/dog_care/expertlist.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"dog_care",
+						"expertlist.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vet list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":\"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Symptoms List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":\"3\",\n    \"vet_id\":\"33\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://159.203.183.64/Live/API/CorePHPAPIS/dog_care/symptoms.php",
+					"protocol": "http",
+					"host": [
+						"159",
+						"203",
+						"183",
+						"64"
+					],
+					"path": [
+						"Live",
+						"API",
+						"CorePHPAPIS",
+						"dog_care",
+						"symptoms.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "vet_id",
+							"value": "33",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "request",
+							"value": "\"my dog is not in good conditon please help me out\"",
+							"type": "text"
+						},
+						{
+							"key": "symptom_levels",
+							"value": "leve0",
+							"type": "text"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/mithunkumar/Desktop/file.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://159.203.183.64/Live/API/CorePHPAPIS/dog_care/create_request.php",
+					"protocol": "http",
+					"host": [
+						"159",
+						"203",
+						"183",
+						"64"
+					],
+					"path": [
+						"Live",
+						"API",
+						"CorePHPAPIS",
+						"dog_care",
+						"create_request.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch My Dog Requests",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":\"3\",\n    \"firstname\":\"ravi\",\n    \"lastname\":\"kumar\",\n    \"address\":\"Najibabad\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://159.203.183.64/Live/API/CorePHPAPIS/dog_care/update_profile.php",
+					"protocol": "http",
+					"host": [
+						"159",
+						"203",
+						"183",
+						"64"
+					],
+					"path": [
+						"Live",
+						"API",
+						"CorePHPAPIS",
+						"dog_care",
+						"update_profile.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Expert Reply",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Pet Detail",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "change_password.php",
+					"host": [
+						"change_password",
+						"php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conclude History",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://159.203.183.64/Live/API/CorePHPAPIS/dog_care/fetch_conclude_history.php",
+					"protocol": "http",
+					"host": [
+						"159",
+						"203",
+						"183",
+						"64"
+					],
+					"path": [
+						"Live",
+						"API",
+						"CorePHPAPIS",
+						"dog_care",
+						"fetch_conclude_history.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
